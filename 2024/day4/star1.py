@@ -1,4 +1,4 @@
-grid = open("day4/input.txt", "r").read().split()
+grid = open("2024/day4/input.txt", "r").read().split()
 total = 0
 dir = ((1,1), (1,0), (1,-1), (0,1), (0,-1), (-1,1), (-1,0), (-1,-1))
 for i in range(len(grid)):
