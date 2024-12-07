@@ -1,5 +1,5 @@
 total = 0
-for line in open("day2/input.txt", "r"):
+for line in open("2024/day2/input.txt", "r"):
     ar = list(map(int, line.split()))
     safe = True
     if( ar == sorted(ar) or ar==sorted(ar, reverse=True)):

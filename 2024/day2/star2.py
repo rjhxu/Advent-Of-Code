@@ -1,5 +1,5 @@
 total = 0
-for line in open("day2/input.txt", "r"):
+for line in open("2024/day2/input.txt", "r"):
     ar = list(map(int, line.split()))
     for i in range(len(ar)):
         safe = True
