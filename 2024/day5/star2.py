@@ -1,3 +1,12 @@
+from functools import cmp_to_key
+
+
+def comp(x,y):
+    if x in d and y in d[x]:
+        return 1
+    else:
+        return -1
+    
 d = {}
 pages = []
 total = 0
@@ -14,6 +23,7 @@ for line in open("2024/day5/input.txt","r"):
         pages =[]
         safe = True
         ar = line.split(',')
+        ar[-1]=ar[-1].strip()
         for currentpage in ar:
             for seenpage in pages:
                 for unallowedpage in d[seenpage]:
@@ -22,6 +32,7 @@ for line in open("2024/day5/input.txt","r"):
             if currentpage in d: 
                 pages.append(currentpage)
 
-        if(safe):
+        if(not safe):
+            ar = sorted(ar, key=cmp_to_key(comp))
             total+=int(ar[len(ar)//2])
 print(total)
