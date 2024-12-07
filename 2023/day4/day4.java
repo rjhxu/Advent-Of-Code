@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class day4 {
+    @SuppressWarnings("unused")
     public static void main(String[] args) throws FileNotFoundException {
 
         Scanner s = new Scanner(new FileReader("input.txt"));
@@ -16,5 +17,6 @@ public class day4 {
                 winners.add(Integer.parseInt(win[j]));
             }
         }
+        s.close();
     }
 }

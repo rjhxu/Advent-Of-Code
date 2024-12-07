@@ -46,5 +46,6 @@ public class day1 {
             }
         }
         System.out.println(sum);
+        s.close();
     }
 }

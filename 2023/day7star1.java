@@ -3,6 +3,7 @@ import java.io.*;
 
 public class day7star1 {
     public static HashMap<Character, Integer> cardValue = new HashMap<>();
+    @SuppressWarnings("unused")
     public static void main(String[] args) throws FileNotFoundException {
         cardValue.put('A', 14);
         cardValue.put('K', 13);
@@ -27,7 +28,7 @@ public class day7star1 {
             bid.put(hands[i], Integer.parseInt(line.substring(6).trim()));
             Arrays.sort(hands, new sortCards());
         }
-        
+        s.close();
     }
 }
 class sortCards implements Comparator<String> {

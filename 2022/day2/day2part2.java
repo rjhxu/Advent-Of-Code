@@ -28,6 +28,7 @@ public class day2part2
                     break;
             }
         }
+        s.close();
         System.out.println(points);
 	}
 
