@@ -9,6 +9,4 @@ for i in range(len(grid)):
             if(i+2<len(grid) and j+2<len(grid[0])):
                 total+=(grid[i+1][j+1]=='A' and grid[i+2][j+2]=='M' and ((grid[i][j+2]=='M' and grid[i+2][j]=='S') or (grid[i][j+2]=='S' and grid[i+2][j]=='M')))
 
-
-
 print(total)
