@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class test {
+public class oldtest {
     public static void main(String[] args) throws FileNotFoundException {
 
         String[] hands = {"KKKKK", "AAAAA", "A1234", "K1234", "AAKK1", "KKAA1", "AAAKK", "KKKK1", "AAA12", "11AKJ"};
