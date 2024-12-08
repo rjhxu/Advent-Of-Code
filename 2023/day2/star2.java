@@ -3,9 +3,9 @@ package day2;
 import java.util.*;
 import java.io.*;
 
-public class day2star2 {
+public class star2 {
     public static long sum  = 0;
-    public static void main(String[] ILOVEPENISPENISPENIS) throws IOException {
+    public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(new FileReader("2023/day2/input.txt"));
         for(int i =1; i<101; i++) {
             String[] temp = in.nextLine().split(":");

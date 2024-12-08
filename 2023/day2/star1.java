@@ -3,10 +3,10 @@ package day2;
 import java.util.*;
 import java.io.*;
 
-public class day2star1 {
+public class star1 {
     public static int sum  = 0;
     public static HashMap<String, Integer> mp = new HashMap<>();
-    public static void main(String[] ILOVEPENISPENISPENIS) throws IOException {
+    public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(new FileReader("2023/day2/input.txt"));
         mp.put("blue", 14);
         mp.put("green", 13);
