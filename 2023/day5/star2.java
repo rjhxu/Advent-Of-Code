@@ -25,14 +25,22 @@ class Range {
         return "(" + start + ", " + end + ")";
     }
 }
-public class star1 {
+public class star2 {
 
     @SuppressWarnings("unchecked")
     public static HashMap<Range, Long>[] maps = new HashMap[7];
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner s = new Scanner(new FileReader("2023/day5/input.txt"));
+
+        Scanner s = new Scanner(new FileReader("input.txt"));
         //populate seeds
-        long[] seeds = Arrays.stream(s.nextLine().substring(7).trim().split(" +")).mapToLong(Long::parseLong).toArray();  
+        long[] seedranges = Arrays.stream(s.nextLine().substring(7).trim().split(" +")).mapToLong(Long::parseLong).toArray();  
+        ArrayList<Long> seeds = new ArrayList<>();
+        for(int i =0; i<seedranges.length/2; i++) {
+            for(long j = seedranges[i]; j<seedranges[i+1]; j++) {
+                seeds.add(j);
+            }
+        }
+        
         s.nextLine();
         for (int i = 0; i < 7; i++) {
             maps[i] = new HashMap<Range, Long>();
@@ -52,20 +60,20 @@ public class star1 {
                 }
             }
         }
-        for(int i = 0; i<seeds.length; i++) {
+        for(int i = 0; i<seeds.size(); i++) {
 
             for(int j =0; j<7; j++) {
                 for(Range range : maps[j].keySet()){
 
-                    if(range.inRange(seeds[i])) {
-                        seeds[i]=seeds[i]+maps[j].get(range);
+                    if(range.inRange(seeds.get(i))) {
+                        seeds.set(i, seeds.get(i)+maps[j].get(range));
                         break;
                     }
                 }
             }
         }
-        Arrays.sort(seeds);
-        System.out.println(seeds[0]);
+        Collections.sort(seeds);
+        System.out.println(seeds.get(0));
         s.close();
     }
 }
