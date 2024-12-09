@@ -31,14 +31,12 @@ public class star2 {
     public static HashMap<Range, Long>[] maps = new HashMap[7];
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner s = new Scanner(new FileReader("input.txt"));
+        Scanner s = new Scanner(new FileReader("2023/day5/input.txt"));
         //populate seeds
         long[] seedranges = Arrays.stream(s.nextLine().substring(7).trim().split(" +")).mapToLong(Long::parseLong).toArray();  
-        ArrayList<Long> seeds = new ArrayList<>();
+        ArrayList<Range> seeds = new ArrayList<>();
         for(int i =0; i<seedranges.length/2; i++) {
-            for(long j = seedranges[i]; j<seedranges[i+1]; j++) {
-                seeds.add(j);
-            }
+            seeds.add(new Range(seedranges[i], seedranges[i+1]));
         }
         
         s.nextLine();
@@ -60,20 +58,28 @@ public class star2 {
                 }
             }
         }
+        Long min = Long.MAX_VALUE;
         for(int i = 0; i<seeds.size(); i++) {
-
             for(int j =0; j<7; j++) {
                 for(Range range : maps[j].keySet()){
-
-                    if(range.inRange(seeds.get(i))) {
-                        seeds.set(i, seeds.get(i)+maps[j].get(range));
-                        break;
+                    for(Range sr : seeds) {
+                        for(Long m = sr.getStart(); m<sr.getEnd(); m++) {
+                            if(range.inRange(m)) {
+                                m=m+maps[j].get(range);
+                                System.out.println(m);
+                                break;
+                            }
+                            if(m<min){
+                                min = m;
+                                System.out.println(min);
+                            }
+                        }
+                        
                     }
                 }
             }
         }
-        Collections.sort(seeds);
-        System.out.println(seeds.get(0));
+        System.out.println(min);
         s.close();
     }
 }
