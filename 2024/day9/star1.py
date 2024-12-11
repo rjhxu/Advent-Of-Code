@@ -22,7 +22,6 @@ while dic:
         elif str[i]:
             first_key = list(dic.keys())[0]
             checksum += i * first_key
-            print(i,' * ', first_key)
             dic[first_key] -= 1
             
             if dic[first_key] == 0:
@@ -30,7 +29,6 @@ while dic:
         else:
             last_key = list(dic.keys())[-1]
             checksum += i * last_key
-            print(i,' * ', last_key)
             dic[last_key] -= 1
             
             if dic[last_key] == 0:
