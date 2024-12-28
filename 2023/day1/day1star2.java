@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class star2 {
+public class day1star2 {
     public static void main(String[] args) throws FileNotFoundException{
         Scanner s = new Scanner(new FileReader("2023/day1/input.txt"));
         int sum = 0;
