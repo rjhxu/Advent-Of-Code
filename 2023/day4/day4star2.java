@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class star2 {
+public class day4star2 {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner s = new Scanner(new FileReader("2023/day4/input.txt"));
         int[] freq = new int[198];

@@ -25,7 +25,7 @@ class Range {
         return "(" + start + ", " + end + ")";
     }
 }
-public class star2 {
+public class day5star2 {
 
     @SuppressWarnings("unchecked")
     public static HashMap<Range, Long>[] maps = new HashMap[7];
