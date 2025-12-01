@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class day1star1 {
+public class Star1 {
     public static void main(String[] args) throws FileNotFoundException {
 
         Scanner s = new Scanner(new FileReader("2023/day1/input.txt"));

@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class day2star2 {
+public class Star2 {
     public static long sum  = 0;
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(new FileReader("2023/day2/input.txt"));

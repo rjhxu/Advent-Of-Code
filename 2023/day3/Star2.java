@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class day3star2 {
+public class Star2 {
     public static int sum  = 0;
     public static char[][] m = new char[140][140];
     static BufferedReader br;

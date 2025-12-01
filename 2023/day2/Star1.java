@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class day2star1 {
+public class Star1 {
     public static int sum  = 0;
     public static HashMap<String, Integer> mp = new HashMap<>();
     public static void main(String[] args) throws IOException {

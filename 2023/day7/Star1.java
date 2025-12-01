@@ -1,8 +1,7 @@
-package day7;
 import java.util.*;
 import java.io.*;
 
-public class day7star1 {
+public class Star1 {
     public static HashMap<Character, Integer> cardValue = new HashMap<>();
     @SuppressWarnings("unused")
     public static void main(String[] args) throws FileNotFoundException {
