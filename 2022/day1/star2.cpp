@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <algorithm>st
+#include <algorithm>
 using namespace std;
 
 int main() {
