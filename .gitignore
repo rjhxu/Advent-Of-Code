@@ -1,0 +1,24 @@
+# Ignore all extensionless files (executables)
+*
+!*/
+!*.cpp
+!*.h
+!*.hpp
+!*.txt
+!*.md
+!*.py
+!*.java
+!*.gitignore
+
+# Debug symbols (macOS)
+*.dSYM/
+
+# Object files
+*.o
+
+# VS Code settings
+.vscode/
+
+# Test files
+test*
+input.txt
